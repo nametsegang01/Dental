@@ -52,7 +52,7 @@
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             width: 100%;
-            max-width: 600px;
+            max-width: 650px;
         }
 
         .form-container h2 {
@@ -102,14 +102,12 @@
         <div class="sidebar">
             <h1>Book Now</h1>
             <p>Secure your smile with just a few clicks. Quick. Easy. Professional.</p>
-
             <div style="text-align: center; margin-top: 20px;">
-                <a href="{% url 'home' %}" class="btn-submit" style="background-color: #0d6777; text-decoration: none; display: inline-block; padding: 12px 20px; border-radius: 6px;">
+                <a href="{% url 'home' %}" class="btn-submit" style="background-color: #0d6777; text-decoration: none;">
                     ← Back to Home
                 </a>
             </div>
         </div>
-
 
         <!-- Form Section -->
         <div class="form-section">
@@ -126,23 +124,40 @@
                         <label for="full_name">Full Name</label>
                         <input type="text" name="full_name" required>
                     </div>
+
+                    <div class="form-group">
+                        <label for="service_type">Service Type</label>
+                        <select name="service_type" required>
+                            <option value="">Select Service</option>
+                            <option value="cleaning">Dental Cleaning</option>
+                            <option value="whitening">Teeth Whitening</option>
+                            <option value="removal">Tooth Removal</option>
+                            <option value="filling">Cavity Filling</option>
+                            <option value="checkup">Routine Check-up</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="patient_type">Are you a new or returning patient?</label>
+                        <select name="patient_type" required>
+                            <option value="">Select</option>
+                            <option value="new">New Patient</option>
+                            <option value="returning">Returning Patient</option>
+                        </select>
+                    </div>
+
                     <div class="form-group">
                         <label for="date">Preferred Date</label>
                         <input type="date" name="date" required>
                     </div>
+
                     <div class="form-group">
                         <label for="time">Preferred Time</label>
                         <input type="time" name="time" required>
                     </div>
-                    <div class="form-group">
-                        <label for="notes">Reason for Visit (optional)</label>
-                        <textarea name="notes" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Book Now</button>
-                </form>
 
-                <!-- Back to Home Button -->
-                
+                    <button type="submit" class="btn-submit">Book Appointment</button>
+                </form>
             </div>
         </div>
     </div>
