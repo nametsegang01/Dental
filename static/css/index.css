@@ -1,0 +1,267 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #17a2b8;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    position: relative;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fdfbfbfd;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu li {
+    font-size: 1rem;
+}
+
+.navbar-menu a:hover {
+    color: #010c14;
+}
+
+/* Sign Up Button */
+.signup-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: #17a2b8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.signup-btn a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.signup-btn:hover {
+    background: #138496;
+    transform: scale(1.05);
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.8rem;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: #17a2b8;
+    margin-bottom: 15px;
+}
+
+.card a {
+    background: #17a2b8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.card a:hover {
+    background: #138496;
+}
+
+/* Buttons */
+button {
+    background: #17a2b8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #138496;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #17a2b8, #138496);
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 0 0 30px 30px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background: #ffffff;
+    color: #17a2b8;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: transform 0.3s;
+}
+
+.hero .btn:hover {
+    transform: scale(1.1);
+}
+
+/* Stats Section */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px 0;
+    background: #ffffff;
+}
+
+.stats-container .col {
+    text-align: center;
+}
+
+.stats-container h2 {
+    color: #17a2b8;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.stats-container p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Testimonials */
+.testimonials {
+    background: #e8f6f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #f7fbfc;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    border-left: 5px solid #0b7c8d;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    color: #fff9f9;
+}
+
+.testimonials footer {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background: #096e7e;
+    color: rgb(5, 142, 177);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #198ca8;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #0d92a3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .signup-btn {
+        right: 10px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

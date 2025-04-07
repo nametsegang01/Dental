@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meet the Team - Student Dental Care</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #e8fafd;
+            margin: 0;
+            padding: 0;
+            color: #023047;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: white;
+            background-color: #00b4d8;
+            padding: 12px 20px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: #0092b2;
+        }
+
+        h1 {
+            color: #00b4d8;
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .member {
+            background-color: #f0fbfd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .member h3 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: #126782;
+        }
+
+        .member p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="{% url 'home' %}" class="back-link">← Back to Home</a>
+
+    <h1>Meet the Team</h1>
+    <p class="intro">Dedicated professionals making dental care comfortable and affordable for students.</p>
+
+    <div class="team-grid">
+        <div class="member">
+            <h3>Dr. Emily Smith</h3>
+            <p>Lead Dentist</p>
+        </div>
+        <div class="member">
+            <h3>Dr. David Johnson</h3>
+            <p>Orthodontist</p>
+        </div>
+        <div class="member">
+            <h3>Anna Lopez</h3>
+            <p>Dental Hygienist</p>
+        </div>
+        <div class="member">
+            <h3>Lily Chen</h3>
+            <p>Receptionist</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

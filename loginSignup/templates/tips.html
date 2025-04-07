@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oral Health Tips</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #e6f7ff;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007b8a;
+            margin-bottom: 30px;
+        }
+
+        .tip {
+            background-color: #f0fbff;
+            border-left: 6px solid #00bcd4;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+
+        .tip h3 {
+            margin-top: 0;
+            color: #026c8e;
+        }
+
+        .tip p {
+            margin: 10px 0 0;
+            color: #333;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 18px;
+            background-color: #007b8a;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005f6b;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="{% url 'home' %}" class="back-button">← Back to Home</a>
+
+    <h1>Oral Health Tips for Students</h1>
+
+    <div class="tip">
+        <h3>1. Brush Twice Daily</h3>
+        <p>Make it a habit to brush your teeth in the morning and before bedtime to keep your mouth fresh and clean.</p>
+    </div>
+
+    <div class="tip">
+        <h3>2. Don’t Skip Flossing</h3>
+        <p>Flossing removes plaque and food particles between your teeth that a toothbrush can't reach.</p>
+    </div>
+
+    <div class="tip">
+        <h3>3. Cut Down on Sugary Snacks</h3>
+        <p>Limit soda, candy, and processed snacks that can lead to cavities and enamel damage.</p>
+    </div>
+
+    <div class="tip">
+        <h3>4. Drink More Water</h3>
+        <p>Water helps rinse away bacteria and keeps your mouth hydrated — especially after meals.</p>
+    </div>
+
+    <div class="tip">
+        <h3>5. Don’t Miss Your Dental Appointments</h3>
+        <p>Visit the student dental clinic regularly for cleanings and check-ups — even if your teeth feel fine.</p>
+    </div>
+
+    <div class="tip">
+        <h3>6. Replace Your Toothbrush</h3>
+        <p>Change your toothbrush every 3 months or when bristles become frayed.</p>
+    </div>
+
+    <div class="tip">
+        <h3>7. Use Fluoride Toothpaste</h3>
+        <p>Fluoride helps strengthen your enamel and protects against cavities.</p>
+    </div>
+</div>
+</body>
+</html>

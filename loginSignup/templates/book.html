@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Appointment</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f4f8;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: linear-gradient(to bottom right, #138496, #17a2b8);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .sidebar h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .sidebar p {
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .form-section {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #138496;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .btn-submit {
+            background-color: #138496;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .btn-submit:hover {
+            background-color: #11707a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h1>Book Now</h1>
+            <p>Secure your smile with just a few clicks. Quick. Easy. Professional.</p>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="{% url 'home' %}" class="btn-submit" style="background-color: #0d6777; text-decoration: none; display: inline-block; padding: 12px 20px; border-radius: 6px;">
+                    ← Back to Home
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <div class="form-container">
+                <h2>Book an Appointment</h2>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+                <form method="post" action="{% url 'book' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="full_name">Full Name</label>
+                        <input type="text" name="full_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <input type="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Reason for Visit (optional)</label>
+                        <textarea name="notes" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Book Now</button>
+                </form>
+
+                <!-- Back to Home Button -->
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

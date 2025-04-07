@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Services - Student Dental Care</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #e6f9fc;
+            margin: 0;
+            padding: 0;
+            color: #023047;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: white;
+            background-color: #00b4d8;
+            padding: 12px 20px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: #0092b2;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 34px;
+            color: #00b4d8;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+
+        .service {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f0fbfd;
+            border-left: 6px solid #00b4d8;
+            border-radius: 8px;
+        }
+
+        .service h3 {
+            margin-top: 0;
+            color: #126782;
+        }
+
+        .service p {
+            font-size: 16px;
+            margin: 8px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="{% url 'home' %}" class="back-link">← Back to Home</a>
+
+    <h1>Our Dental Services</h1>
+    <p class="intro">Affordable, friendly, and student-focused dental care — just for you!</p>
+
+    <div class="service">
+        <h3>🦷 General Check-Ups</h3>
+        <p>Regular oral exams to keep your teeth and gums healthy throughout the semester.</p>
+    </div>
+
+    <div class="service">
+        <h3>🪥 Professional Teeth Cleaning</h3>
+        <p>Deep cleaning to remove plaque and tartar, leaving your smile fresh and bright.</p>
+    </div>
+
+    <div class="service">
+        <h3>💡 Fillings & Cavity Treatment</h3>
+        <p>We fix cavities using safe, durable materials — quick and pain-free.</p>
+    </div>
+
+    <div class="service">
+        <h3>😁 Teeth Whitening</h3>
+        <p>Let your smile shine with our student-discounted whitening treatments.</p>
+    </div>
+
+    <div class="service">
+        <h3>🆘 Emergency Dental Care</h3>
+        <p>Tooth pain or injury? We're here when you need urgent care the most.</p>
+    </div>
+
+    <div class="service">
+        <h3>🎓 Oral Health Education</h3>
+        <p>Tips, workshops, and guidance to help students maintain great dental habits.</p>
+    </div>
+</div>
+
+</body>
+</html>

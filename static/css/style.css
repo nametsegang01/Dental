@@ -1,0 +1,99 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif; /* Clean and modern font */
+    background-color: #eef2f3; /* Soft light blue background */
+    color: #333; /* Neutral text color for readability */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Style */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section */
+header {
+    background-color: #00509e; /* Deep blue header */
+    color: #ffffff; /* White text for contrast */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content Section */
+main {
+    background-color: #ffffff; /* White background for content */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Buttons */
+button {
+    background-color: #00509e; /* Blue buttons */
+    color: #ffffff;
+    border: none;
+    border-radius: 20px; /* Fully rounded buttons */
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #003f7e; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Links */
+a {
+    color: #00509e; /* Blue text for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Footer Section */
+footer {
+    background-color: #eef2f3; /* Soft blue footer background */
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+/* Mobile-Friendly Adjustments */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}

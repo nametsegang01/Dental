@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testimonials - Student Dental Care</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            color: #023047;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: white;
+            background-color: #00b4d8;
+            padding: 12px 20px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: #0092b2;
+        }
+
+        h1 {
+            text-align: center;
+            color: #219ebc;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .testimonial {
+            background-color: #e6f9fc;
+            padding: 20px;
+            border-left: 5px solid #00b4d8;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .testimonial p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .testimonial .name {
+            font-weight: bold;
+            color: #126782;
+            font-size: 15px;
+        }
+
+        .stars {
+            color: #f4b400;
+            margin-bottom: 5px;
+        }
+
+        /* Feedback Form Styles */
+        .feedback-form {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #f0fbfd;
+            border-radius: 10px;
+        }
+
+        .feedback-form h2 {
+            color: #126782;
+            margin-bottom: 20px;
+        }
+
+        .feedback-form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .feedback-form input,
+        .feedback-form textarea,
+        .feedback-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        .feedback-form button {
+            background-color: #00b4d8;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .feedback-form button:hover {
+            background-color: #0092b2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="{% url 'home' %}" class="back-link">← Back to Home</a>
+
+    <h1>What Our Patients Say</h1>
+
+    <!-- Existing Testimonials -->
+    <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"I was nervous at first, but the staff made me feel so comfortable. It’s amazing to have a clinic that understands student needs!"</p>
+        <div class="name">— Thabo M., Wits University</div>
+    </div>
+
+    <div class="testimonial">
+        <div class="stars">★★★★☆</div>
+        <p>"The online booking was super easy, and they were even able to fit me in between lectures. Highly recommend!"</p>
+        <div class="name">— Naledi K., UJ</div>
+    </div>
+
+    <!-- Feedback Form -->
+    <div class="feedback-form">
+        <h2>Share Your Experience</h2>
+        <form method="post" action="{% url 'submit_testimonial' %}">
+            {% csrf_token %}
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="university">University</label>
+            <input type="text" id="university" name="university" required>
+
+            <label for="rating">Rating</label>
+            <select id="rating" name="rating" required>
+                <option value="">Select...</option>
+                <option value="5">★★★★★ - Excellent</option>
+                <option value="4">★★★★☆ - Great</option>
+                <option value="3">★★★☆☆ - Good</option>
+                <option value="2">★★☆☆☆ - Fair</option>
+                <option value="1">★☆☆☆☆ - Poor</option>
+            </select>
+
+            <label for="message">Testimonial</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

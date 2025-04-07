@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - Student Dental Care</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            color: #023047;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #219ebc;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #126782;
+            margin-top: 40px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background-color: #dff6fb;
+            padding: 15px;
+            border-left: 4px solid #00b4d8;
+            border-radius: 8px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: white;
+            background-color: #00b4d8;
+            padding: 12px 20px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: #0092b2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Back Button at Top -->
+    <a href="{% url 'home' %}" class="back-link">← Back to Home</a>
+
+    <h1>About Us</h1>
+    <p>
+        Welcome to <strong>Student Dental Care</strong> — a dental clinic designed specifically for students. We understand the busy lives, budgets, and health priorities of students, and we're here to make oral care simple, affordable, and stress-free.
+    </p>
+
+    <div class="highlight">
+        <p><strong>Our mission:</strong> To provide high-quality, student-centered dental services that keep you smiling throughout your academic journey.</p>
+    </div>
+
+    <h2>Why Students Choose Us</h2>
+    <ul>
+        <li>🦷 Affordable and transparent pricing just for students</li>
+        <li>📅 Easy online booking and appointment management</li>
+        <li>🎓 Convenient campus-friendly location</li>
+        <li>💬 Friendly dental professionals who understand student life</li>
+    </ul>
+
+    <h2>What We Offer</h2>
+    <p>
+        From routine checkups and cleanings to emergency care and guidance, we're here for all your dental needs. Our services include:
+    </p>
+    <ul>
+        <li>General Dentistry</li>
+        <li>Teeth Cleaning</li>
+        <li>Fillings & Restorations</li>
+        <li>Whitening Treatments</li>
+        <li>Dental Education for Students</li>
+    </ul>
+
+    <h2>Meet Our Team</h2>
+    <p>
+        Our compassionate team of dentists and dental assistants is trained to care for students like you. We prioritize comfort, education, and accessibility in everything we do.
+    </p>
+</div>
+
+</body>
+</html>
